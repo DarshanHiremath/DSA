@@ -1,0 +1,88 @@
+package timepass;
+
+import java.util.Comparator;
+import java.util.TreeSet;
+
+class Book implements Comparator<String>
+{
+
+	public int compare(Integer s1, Integer s2) {
+		// TODO Auto-generated method stub
+		return s1-s2 ;
+	}
+
+	private String bookName;
+	private int bookId;
+	private int year;
+	
+	
+	public String getBookName() 
+	{
+		return bookName;
+	}
+
+
+
+	public void setBookName(String bookName) 
+	{
+		this.bookName = bookName;
+	}
+
+
+	public int getBookId()
+	{
+		return bookId;
+	}
+
+
+	public void setBookId(int bookId) 
+	{
+		this.bookId = bookId;
+	}
+
+
+	public int getYear() 
+	{
+		return year;
+	}
+
+
+	public void setYear(int year)
+	{
+		this.year = year;
+	}
+	
+
+	public Book(String bookName, int bookId, int year)
+	{
+		super();
+		this.bookName = bookName;
+		this.bookId = bookId;
+		this.year = year;
+	}
+
+
+
+	@Override
+	public int compare(String o1, String o2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}
+public class BeansUMI 
+{
+
+	public static void main(String[] args) 
+	{
+		TreeSet<Book> t=new TreeSet<Book>();
+		Book b1=new Book("bible",123,2000);
+		Book b2=new Book("Bhagavad gita",111,2000);
+		Book b3=new Book("khuran",786,2000);
+		t.add(b1);
+		t.add(b2);
+		t.add(b3);
+	}
+
+
+}
